@@ -52,6 +52,6 @@ class Student
 
 trait Queries
 {
-//made
+
 
 }

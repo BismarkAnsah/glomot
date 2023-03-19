@@ -5,12 +5,12 @@ class Student
 
 
     /**
-     * gets gradepoint for mark supplied
+     * gets gradepoint for mark supplied. this is for 1 credit hour course
      *
      * @param float $mark mark scored in a particular course.
      * @return float grade point for the specified mark.
      */
-    public function getGradePoint(float $mark)
+    public function getSingleCreditGP(float $mark)
     {
         if($mark>=80)
             return 4.0;
@@ -30,4 +30,19 @@ class Student
             return 0;
 
     }
+
+
+    /**
+     * returns the full grade point based on the course supplied and the corresponding number of credits.
+     *
+     * @param float $mark
+     * @param integer $creditHrs
+     * @return void
+     */
+    public function getFullCreditGP(float $mark, int $creditHrs)
+    {
+        return $this->getSingleCreditGP($mark) * $creditHrs;
+    }
+
+
 }

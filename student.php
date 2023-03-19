@@ -45,4 +45,13 @@ class Student
     }
 
 
+
+
+}
+
+
+trait Queries
+{
+
+    
 }
